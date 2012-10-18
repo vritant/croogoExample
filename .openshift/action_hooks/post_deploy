@@ -2,3 +2,14 @@
 # This is a simple post deploy hook executed after your application 
 # is deployed and started.  This script gets executed directly, so 
 # it could be python, php, ruby, etc.
+
+# move config fils back to runtime repo
+if [ -f $OPENSHIFT_DATA_DIR\croogo.php ];
+then
+    cp $OPENSHIFT_DATA_DIR\croogo.php $OPENSHIFT_REPO_DIR\php/app/Config/croogo.php 
+    cp $OPENSHIFT_DATA_DIR\database.php $OPENSHIFT_REPO_DIR\php/app/Config/database.php 
+    cp $OPENSHIFT_DATA_DIR\settings.yml $OPENSHIFT_REPO_DIR\php/app/Config/settings.yml
+    echo "Moving config files back to runtime repo" 
+else
+    echo "Config files do not exist....yet."
+fi

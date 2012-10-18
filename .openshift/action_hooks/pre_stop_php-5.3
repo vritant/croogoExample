@@ -12,3 +12,12 @@
 # prevent your application from stopping cleanly or starting at all.
 # Application start and stop is subject to different timeouts
 # throughout the system.
+if [ -f $OPENSHIFT_REPO_DIR\php/app/Config/croogo.php ];
+then
+    cp $OPENSHIFT_REPO_DIR\php/app/Config/croogo.php $OPENSHIFT_DATA_DIR\croogo.php
+    cp $OPENSHIFT_REPO_DIR\php/app/Config/database.php $OPENSHIFT_DATA_DIR\database.php
+    cp $OPENSHIFT_REPO_DIR\php/app/Config/settings.yml $OPENSHIFT_DATA_DIR\settings.yml
+    echo "backing up Config files";
+else
+    echo "Config files do not exist."
+fi

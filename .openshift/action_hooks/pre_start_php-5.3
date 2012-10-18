@@ -12,3 +12,14 @@
 # prevent your application from stopping cleanly or starting at all.
 # Application start and stop is subject to different timeouts
 # throughout the system.
+
+# create tmp, vendors folders ( if needed ) with right permissions 
+mkdir -p $OPENSHIFT_DATA_DIR\vendors
+mkdir -p $OPENSHIFT_DATA_DIR\tmp/cache
+mkdir -p $OPENSHIFT_DATA_DIR\tmp/cache/models
+mkdir -p $OPENSHIFT_DATA_DIR\tmp/cache/persistent
+mkdir -p $OPENSHIFT_DATA_DIR\tmp/cache/queries
+mkdir -p $OPENSHIFT_DATA_DIR\tmp/cache/views
+mkdir -p $OPENSHIFT_DATA_DIR\tmp/logs
+mkdir -p $OPENSHIFT_DATA_DIR\tmp/tests
+chmod -R 755 $OPENSHIFT_DATA_DIR\tmp
