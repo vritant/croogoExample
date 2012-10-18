@@ -84,7 +84,7 @@ if (!defined('TESTS')) {
  * Path to the temporary files directory.
  */
 if (!defined('TMP')) {
-	define('TMP', APP . 'tmp' . DS);
+	define('TMP', $_ENV['OPENSHIFT_DATA_DIR'] . 'tmp' . DS);
 }
 
 /**
@@ -101,7 +101,7 @@ if (!defined('TMP')) {
  * Path to the vendors directory.
  */
 if (!defined('VENDORS')) {
-	define('VENDORS', ROOT . DS . 'vendors' . DS);
+	define('VENDORS', $_ENV['OPENSHIFT_DATA_DIR'] . 'vendors' . DS);
 }
 
 /**

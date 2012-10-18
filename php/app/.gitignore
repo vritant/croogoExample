@@ -7,8 +7,6 @@ webroot/uploads/
 *.bak
 *.swp
 
-# Cake cache
-tmp/
 
 # Others
 .DS_Store
