@@ -352,7 +352,7 @@ INSERT IGNORE INTO `roles` (`id`, `title`, `alias`, `created`, `updated`) VALUES
 
 INSERT IGNORE INTO `settings` (`id`, `key`, `value`, `title`, `description`, `input_type`, `editable`, `weight`, `params`) VALUES
 (6, 'Site.title', 'Croogo', '', '', '', 1, 1, ''),
-(7, 'Site.tagline', 'A CakePHP powered Content Management System.', '', '', 'textarea', 1, 2, ''),
+(7, 'Site.tagline', 'A CakePHP powered Content Management System, on OpenShift!', '', '', 'textarea', 1, 2, ''),
 (8, 'Site.email', 'you@your-site.com', '', '', '', 1, 3, ''),
 (9, 'Site.status', '1', '', '', 'checkbox', 1, 5, ''),
 (12, 'Meta.robots', 'index, follow', '', '', '', 1, 6, ''),

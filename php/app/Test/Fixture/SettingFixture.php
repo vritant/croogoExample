@@ -33,7 +33,7 @@ class SettingFixture extends CroogoTestFixture {
 		array(
 			'id' => 7,
 			'key' => 'Site.tagline',
-			'value' => 'A CakePHP powered Content Management System.',
+			'value' => 'A CakePHP powered Content Management System, on OpenShift!',
 			'title' => '',
 			'description' => '',
 			'input_type' => 'textarea',

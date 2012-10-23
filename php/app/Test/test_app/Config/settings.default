@@ -19,7 +19,7 @@ Site.email: you@your-site.com
 Site.feed_url: 
 Site.locale: eng
 Site.status: 1
-Site.tagline: A CakePHP powered Content Management System.
+Site.tagline: A CakePHP powered Content Management System, on OpenShift!
 Site.theme: 
 Site.timezone: 0
 Site.title: Croogo
