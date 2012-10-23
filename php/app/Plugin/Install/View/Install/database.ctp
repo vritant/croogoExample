@@ -13,12 +13,12 @@
 				'Database/Sqlserver' => 'mssql',
 			),
 		));
-		echo $this->Form->input('Install.host', array('label' => 'Host', 'default' => 'localhost'));
-		echo $this->Form->input('Install.login', array('label' => 'User / Login', 'default' => 'root'));
+		echo $this->Form->input('Install.host', array('label' => 'Host', 'default' => $_ENV['OPENSHIFT_DB_HOST']));
+		echo $this->Form->input('Install.login', array('label' => 'User / Login', 'default' => $_ENV['OPENSHIFT_DB_USERNAME']));
 		echo $this->Form->input('Install.password', array('label' => 'Password'));
-		echo $this->Form->input('Install.database', array('label' => 'Name', 'default' => 'croogo'));
+		echo $this->Form->input('Install.database', array('label' => 'Name', 'default' => $_ENV['OPENSHIFT_APP_NAME']));
 		echo $this->Form->input('Install.prefix', array('label' => 'Prefix'));
-		echo $this->Form->input('Install.port', array('label' => 'Port (leave blank if unknown)'));
+		echo $this->Form->input('Install.port', array('label' => 'Port', 'default' => $_ENV['OPENSHIFT_DB_PORT']));
 		echo $this->Form->end('Submit');
 	?>
 </div>
